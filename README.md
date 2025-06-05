@@ -60,5 +60,12 @@ Consulter les rapports quotidiens/hebdomadaires
 
 <h1>📷 Aperçus</h1>
 
-![image](https://github.com/user-attachments/assets/f2ddd13e-e49f-4cbf-bdaa-8bbe6492a6c5)
-![image](https://github.com/user-attachments/assets/1888a59b-f45e-4617-93c1-7064743d6c0c)
+![image](https://github.com/user-attachments/assets/24bf00a1-9411-4af4-808b-30665caf4ab4)
+![image](https://github.com/user-attachments/assets/2ac91089-b4f8-41f9-abe4-d1303cf5e500)
+![image](https://github.com/user-attachments/assets/4b374ca7-e96d-435c-b627-ab993d35a829)
+![image](https://github.com/user-attachments/assets/a7380426-7a36-47d4-b686-b6471e909c59)
+
+Dashbord manager :
+![image](https://github.com/user-attachments/assets/f119a7bd-917e-42d5-8a84-d5ca270c26a7)
+Dashbord Staff :
+![image](https://github.com/user-attachments/assets/8bf91e6e-1acb-4086-b267-965eecd1a53b)
