@@ -1,0 +1,137 @@
+/* Styles généraux */
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-base: #f5f5f5;
+}
+
+/* Barre d'outils */
+.tool-bar {
+    -fx-background-color: linear-gradient(to right, #3a7bd5, #00d2ff);
+    -fx-padding: 10 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 15;
+}
+
+/* Boutons de base */
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 8 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+    -fx-transition: all 0.3s;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 2);
+}
+
+/* Boutons spécifiques */
+.add-btn {
+    -fx-background-color: #4CAF50;
+}
+
+.add-btn:hover {
+    -fx-background-color: #45a049;
+}
+
+.refresh-btn {
+    -fx-background-color: #2196F3;
+}
+
+.refresh-btn:hover {
+    -fx-background-color: #0b7dda;
+}
+
+.edit-btn {
+    -fx-background-color: #FFC107;
+    -fx-text-fill: #333;
+}
+
+.edit-btn:hover {
+    -fx-background-color: #ffb300;
+}
+
+.delete-btn {
+    -fx-background-color: #F44336;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.view-btn {
+    -fx-background-color: #9C27B0;
+}
+
+.view-btn:hover {
+    -fx-background-color: #7b1fa2;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+    -fx-border-color: #e0e0e0;
+    -fx-background-color: #f1f8fe;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-font-weight: bold;
+}
+
+/* Cellules d'action */
+.action-cell {
+    -fx-spacing: 8px;
+    -fx-alignment: CENTER;
+    -fx-padding: 5px;
+}
+
+/* Dialogues */
+.dialog-pane {
+    -fx-background-color: #fafafa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: linear-gradient(to right, #3a7bd5, #00d2ff);
+    -fx-padding: 10px;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* Icônes */
+.fontawesome-icon-view {
+    -fx-fill: white;
+    -fx-font-size: 14px;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.user.ConfirmationPopupController">
+    <VBox alignment="CENTER" maxWidth="500" spacing="20" style="-fx-background-color: white; -fx-padding: 30;">
+
+        <!-- Logo -->
+        <ImageView fitHeight="150.0" fitWidth="167.0">
+            <image>
+                <Image url="@images/logo_vert.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="-20.0" top="-40.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- User infos -->
+        <Label style="-fx-font-weight: bold;" text="Nom :" textFill="#347b2c">
+         <VBox.margin>
+            <Insets left="-400.0" />
+         </VBox.margin></Label>
+        <Label fx:id="nameLabel">
+            <VBox.margin>
+                <Insets top="-40.0" />
+            </VBox.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Votre mail est :" textFill="#2e7931">
+         <VBox.margin>
+            <Insets left="-350.0" />
+         </VBox.margin></Label>
+        <Label fx:id="emailLabel">
+            <VBox.margin>
+                <Insets top="-40.0" />
+            </VBox.margin>
+        </Label>
+
+        <!-- Reservation details in one line -->
+        <HBox spacing="15">
+            <Label style="-fx-font-weight: bold;" text="Détails de votre réservation :" textFill="#2a672c" />
+            <Label text="📅" />
+            <Label fx:id="dateLabel">
+                <font><Font size="14.0" /></font>
+            </Label>
+            <Label text="⏰" />
+            <Label fx:id="timeLabel">
+                <font><Font size="14.0" /></font>
+            </Label>
+            <Label text="👥" />
+            <Label fx:id="guestsLabel">
+                <font><Font size="14.0" /></font>
+            </Label>
+        </HBox>
+
+        <!-- Message -->
+        <Label text="Avez-vous des messages supplémentaires ?" textFill="#afb347">
+         <VBox.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+        <TextArea fx:id="messageArea" prefRowCount="3" promptText="Additional Message">
+            <VBox.margin>
+                <Insets top="-20.0" />
+            </VBox.margin>
+        </TextArea>
+
+        <!-- Book Now -->
+        <Button fx:id="confirmBookButton" onAction="#confirmReservation" style="-fx-background-color: #B0964F; -fx-text-fill: white; -fx-font-weight: bold;" text="BOOK NOW" />
+
+    </VBox>
+</StackPane>

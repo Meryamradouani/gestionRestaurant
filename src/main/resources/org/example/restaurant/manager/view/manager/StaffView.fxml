@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="main-container" stylesheets="@../../styles/staff.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.manager.controllers.manager.StaffController">
+
+    <!-- Barre d'outils avec bouton Ajouter -->
+    <HBox alignment="CENTER_RIGHT" styleClass="toolbar" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="10">
+        <Button onAction="#handleAddStaff" style="-fx-background-color: #133823;" styleClass="add-button" text="Ajouter Staff" textFill="WHITE" />
+    </HBox>
+
+    <!-- TableView -->
+    <TableView fx:id="staffTable" styleClass="staff-table" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="60">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="80" styleClass="column-id" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="200" styleClass="column-name" text="Nom" />
+            <TableColumn fx:id="emailColumn" prefWidth="250" styleClass="column-email" text="Email" />
+            <TableColumn fx:id="roleColumn" prefWidth="150" styleClass="column-role" text="Rôle" />
+            <TableColumn fx:id="actionColumn" prefWidth="180" styleClass="column-actions" text="Actions" />
+        </columns>
+    </TableView>
+</AnchorPane>

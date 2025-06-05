@@ -1,0 +1,84 @@
+/* Couleurs principales */
+.root {
+    -primary-color: #133823;
+    -secondary-color: #1e4d2b;
+    -text-color: white;
+    -muted-text: #94a3b8;
+    -hover-color: #2d5a3d;
+}
+
+/* Barre du haut */
+.top-bar {
+    -fx-background-color: -primary-color;
+    -fx-padding: 12px 25px;
+}
+
+.search-box {
+    -fx-background-color: #334155;
+    -fx-background-radius: 20;
+}
+
+.search-icon {
+    -fx-padding: 0 5 0 10;
+    -fx-text-fill: -muted-text;
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-color;
+    -fx-prompt-text-fill: -muted-text;
+}
+
+/* Barre latérale */
+.sidebar {
+    -fx-background-color: -primary-color;
+    -fx-padding: 20px 15px;
+}
+
+.branding {
+    -fx-padding: 0 0 20px 10px;
+}
+
+.brand-icon {
+    -fx-font-size: 40px;
+    -fx-padding: 0 5px 0 0;
+}
+
+.brand-title {
+    -fx-text-fill: -text-color;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.brand-subtitle {
+    -fx-text-fill: -muted-text;
+    -fx-font-size: 14px;
+}
+
+.section-title {
+    -fx-text-fill: #7e9b88;
+    -fx-font-size: 12px;
+    -fx-padding: 15 0 5 10;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-color;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 15;
+    -fx-pref-width: 220;
+}
+
+.nav-btn:hover {
+    -fx-background-color: -hover-color;
+    -fx-cursor: hand;
+}
+
+.user-profile {
+    -fx-padding: 15px 0;
+    -fx-border-color: -secondary-color;
+    -fx-border-width: 1px 0 0 0;
+    -fx-spacing: 10;
+}
+

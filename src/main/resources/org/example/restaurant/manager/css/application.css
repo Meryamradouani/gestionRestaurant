@@ -1,0 +1,147 @@
+/* Style général */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-base: #3498db;
+    -fx-background: #f5f5f5;
+}
+
+/* En-tête */
+.header-box {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 10;
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}
+.data-table {
+    -fx-pref-height: 200;
+    -fx-background-color: #e3f2fd; /* couleur de fond */
+    -fx-text-fill: #2c3e50; /* couleur du texte */
+    -fx-table-cell-border-color: transparent;
+    -fx-control-inner-background: #e3f2fd;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.refresh-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+}
+
+/* Conteneurs */
+.main-scroll {
+    -fx-background: #f5f5f5;
+}
+
+.main-container {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Cartes KPI */
+.kpi-container {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.kpi-card {
+    -fx-background-color: #FBF3C1;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 5);
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-pref-width: 250;
+}
+
+.kpi-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.kpi-main-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.kpi-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.kpi-secondary-value {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.reservation-value {
+    -fx-text-fill: #e74c3c;
+}
+
+.order-value {
+    -fx-text-fill: #2ecc71;
+}
+
+.revenue-value {
+    -fx-text-fill: #f39c12;
+}
+
+/* Graphiques */
+.charts-container {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.chart-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 5);
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-pref-width: 500;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.chart {
+    -fx-pref-height: 300;
+}
+
+/* Tableaux */
+.table-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 5);
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.table-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.data-table {
+    -fx-pref-height: 200;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}

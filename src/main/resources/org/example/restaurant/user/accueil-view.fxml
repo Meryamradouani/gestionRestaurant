@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane stylesheets="@style.css" fx:id="root" fitToWidth="true" hbarPolicy="NEVER" maxWidth="-Infinity" minHeight="-Infinity" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.user.AcceuilController">
+    <VBox maxWidth="Infinity" prefWidth="1440.0" spacing="0">
+
+        <!-- SECTION 1 -->
+        <StackPane maxWidth="Infinity">
+            <!-- Image de fond -->
+            <ImageView fitHeight="805" fitWidth="1440" preserveRatio="false">
+                <image>
+                    <Image url="@images/background_acceuil.jpg" />
+                </image>
+            </ImageView>
+
+            <!-- Overlay sombre -->
+            <Pane prefHeight="725" prefWidth="1080" style="-fx-background-color: rgba(27, 59, 47, 0.6);" />
+
+            <!-- Contenu principal -->
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="1440.0" spacing="40">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                </padding>
+
+                <!-- Navbar -->
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="932.0" spacing="40">
+                    <Label styleClass="nav-label" fx:id="homeLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#goToHome" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Home" textFill="white">
+                        <HBox.margin>
+                            <Insets top="-90.0" />
+                        </HBox.margin>
+                    </Label>
+                    <Label styleClass="nav-label" fx:id="menuLabel" onMouseClicked="#goToMenu" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Menu" textFill="white">
+                        <HBox.margin>
+                            <Insets top="-90.0" />
+                        </HBox.margin>
+                    </Label>
+
+                    <Label styleClass="nav-label" fx:id="reviewLabel" onMouseClicked="#goToReview" prefHeight="20.0" prefWidth="86.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Review" textFill="white">
+                        <HBox.margin>
+                            <Insets right="-50.0" top="-90.0" />
+                        </HBox.margin>
+                    </Label>
+
+                    <Button styleClass="nav-label" onAction="#goToProfile" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: transparent; -fx-text-fill: white; -fx-cursor: hand;" text="Profil">
+                        <HBox.margin>
+                            <Insets top="-90.0" />
+                        </HBox.margin>
+                    </Button>
+
+                    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="353.0" spacing="2">
+                        <ImageView fitHeight="257.0" fitWidth="301.0">
+                            <image>
+                                <Image url="@images/logo_blanc.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets left="30.0" right="110.0" />
+                            </VBox.margin>
+                        </ImageView>
+                    </VBox>
+
+                    <Pane HBox.hgrow="ALWAYS" />
+
+                    <Button fx:id="bookTableButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="102.0" style="-fx-background-color: transparent; -fx-border-color: #B0964F; -fx-text-fill: white;" text="BOOK A TABLE">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets top="-90.0" />
+                        </HBox.margin>
+                    </Button>
+                </HBox>
+
+                <!-- Section centrale -->
+                <VBox alignment="CENTER" spacing="20">
+                    <Label style="-fx-font-size: 42px; -fx-font-weight: bold;" text="RESERVE YOUR TABLE" textFill="white" />
+                    <Label style="-fx-font-size: 15px;" text="Dine in elegance, savor Moroccan heritage" textFill="white" />
+                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20">
+                        <Button fx:id="reservationButton" style="-fx-background-color: #B0964F; -fx-text-fill: white;" text="RESERVATION" />
+                        <Button fx:id="openMenuButton" onAction="#goToMenuFromButton" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" text="OPEN MENU">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Button>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </StackPane>
+
+        <!-- SECTION 2 -->
+        <VBox alignment="CENTER" spacing="40" style="-fx-background-color: #133823;">
+            <padding>
+                <Insets bottom="40.0" left="80.0" right="80.0" top="40.0" />
+            </padding>
+
+            <!-- Bloc 1 -->
+            <HBox alignment="CENTER" spacing="60">
+                <VBox prefHeight="180.0" prefWidth="448.0" spacing="10">
+                    <Label text="OUR PLACE" textFill="white" underline="true" />
+                    <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="An Oasis of Elegance &amp; Comfort" textFill="white" />
+                    <Label text="Enjoy your meal in a space inspired by riads and royal salons. Zellige tiles, soft lighting, and velvet cushions offer a feast for the senses." textFill="white" wrapText="true" />
+                    <Button style="-fx-background-color: #B0964F; -fx-text-fill: white;" text="READ MORE" />
+                    <HBox.margin>
+                        <Insets left="-10.0" right="60.0" />
+                    </HBox.margin>
+                </VBox>
+                <ImageView fitHeight="180" fitWidth="375.0" preserveRatio="true">
+                    <image>
+                        <Image url="@images/place.jpg" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="40.0" right="-50.0" />
+                    </HBox.margin>
+                </ImageView>
+            </HBox>
+
+            <!-- Bloc 2 -->
+            <HBox alignment="CENTER" spacing="60">
+                <ImageView fitHeight="180" fitWidth="300" preserveRatio="true">
+                    <image>
+                        <Image url="@images/food.jpg" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="-10.0" right="60.0" />
+                    </HBox.margin>
+                </ImageView>
+                <VBox prefHeight="180.0" prefWidth="383.0" spacing="10">
+                    <Label text="OUR FOOD" textFill="white" underline="true" />
+                    <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="A Symphony of Flavors in Every Dish" textFill="white">
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                    </Label>
+                    <Label text="Our curated menu blends timeless Moroccan recipes with refined presentation. Savor aromatic spices, slow-cooked tajines, and fresh Mediterranean touches." textFill="white" wrapText="true" />
+                    <Button style="-fx-background-color: #B0964F; -fx-text-fill: white;" text="READ MORE" />
+                    <HBox.margin>
+                        <Insets left="110.0" right="-60.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets right="-1.0" />
+                    </padding>
+                </VBox>
+            </HBox>
+
+            <!-- Bloc 3 -->
+            <HBox alignment="CENTER" spacing="60">
+                <VBox prefHeight="180.0" prefWidth="439.0" spacing="10">
+                    <Label text="OUR TEAM" textFill="white" underline="true" />
+                    <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Crafted by Passion, Served with Art" textFill="white" />
+                    <Label text="Meet our culinary artisans, guardians of Moroccan heritage. Every dish is a love letter to tradition, prepared with care and cultural pride." textFill="white" wrapText="true" />
+                    <Button style="-fx-background-color: #B0964F; -fx-text-fill: white;" text="READ MORE" />
+                    <HBox.margin>
+                        <Insets left="-100.0" />
+                    </HBox.margin>
+                </VBox>
+                <ImageView fitHeight="180" fitWidth="315.0" preserveRatio="true">
+                    <image>
+                        <Image url="@images/team.jpg" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="150.0" right="-130.0" />
+                    </HBox.margin>
+                </ImageView>
+            </HBox>
+        </VBox>
+
+
+        <!-- SECTION 3 : Working Hours -->
+        <StackPane>
+            <!-- Image de fond -->
+            <ImageView fitHeight="500.0" fitWidth="1300.0" preserveRatio="false">
+                <image>
+                    <Image url="@images/horaire.jpg" />
+                </image>
+            </ImageView>
+
+            <!-- Contenu -->
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="100">
+                <padding>
+                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                </padding>
+
+                <!-- Partie gauche -->
+                <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="305.0" spacing="10">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="RESERVATION" textFill="white">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label style="-fx-font-size: 40px; -fx-font-weight: bold;" text="Working Hours" textFill="white" />
+                    <HBox spacing="20">
+                        <Button style="-fx-background-color: #B0964F; -fx-text-fill: white;" text="BOOK A TABLE" />
+                    </HBox>
+                    <HBox.margin>
+                        <Insets left="-320.0" right="10.0" />
+                    </HBox.margin>
+                </VBox>
+
+                <!-- Partie droite -->
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="271.0" prefWidth="277.0" spacing="20" style="-fx-background-color: #133823; -fx-background-radius: 10;">
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                    <VBox alignment="CENTER" prefHeight="40.0" prefWidth="190.0" spacing="5">
+                        <Label style="-fx-font-weight: bold;" text="Sunday to Tuesday" textFill="white">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="-100.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="09:00 AM – 10.00 PM" textFill="white">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <VBox.margin>
+                            <Insets top="40.0" />
+                        </VBox.margin>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="5">
+                        <Label style="-fx-font-weight: bold;" text="Friday to Saturday" textFill="white">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="09:00 AM – 10.00 PM" textFill="white">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <VBox.margin>
+                            <Insets top="-30.0" />
+                        </VBox.margin>
+                    </VBox>
+                    <HBox.margin>
+                        <Insets left="180.0" right="-370.0" />
+                    </HBox.margin>
+                </VBox>
+            </HBox>
+        </StackPane>
+
+
+
+
+        <!-- SECTION 4 : Footer -->
+        <VBox spacing="30" style="-fx-background-color: #1e3c28;">
+            <padding>
+                <Insets bottom="30" left="80" right="80" top="50" />
+            </padding>
+            <HBox alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="1158.0" spacing="100" style="-fx-background-color: #214631;">
+                <!-- Logo + Social -->
+                <VBox spacing="20">
+                    <ImageView fitHeight="228.0" fitWidth="250.0">
+                        <image>
+                            <Image url="@images/logo_blanc.png" />
+                        </image>
+                  <VBox.margin>
+                     <Insets left="-40.0" />
+                  </VBox.margin>
+                    </ImageView>
+                    <HBox spacing="15" />
+                </VBox>
+
+                <!-- Opening times -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Opening Restaurent" textFill="white" />
+                    <Label prefHeight="17.0" prefWidth="180.0" text="Sa - We: 09 :00am - 10:00pm" textFill="#cccccc" />
+                    <Label text="Thu - We: 09 :00am - 10:00pm" textFill="#cccccc" />
+                    <Label text="Friday Closed" textFill="#cccccc" />
+                </VBox>
+
+                <!-- Links -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="User Link" textFill="white" />
+                    <Label text="About Us" textFill="#cccccc" />
+                    <Label text="Contact Us" textFill="#cccccc" />
+                    <Label text="Order Delivery" textFill="#cccccc" />
+                    <Label text="Payment et Tax" textFill="#cccccc" />
+                    <Label text="Terms of Services" textFill="#cccccc" />
+                </VBox>
+
+                <!-- Contact + Email -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Contact Us" textFill="white" />
+                    <Label text="543 Country Club Ave," textFill="#cccccc" />
+                    <Label text="NC 27587, London, UK" textFill="#cccccc" />
+                    <Label text="+1257 6541120" textFill="#cccccc" />
+                    <HBox spacing="0">
+                        <TextField promptText="Email" />
+                        <Button style="-fx-background-color: #B0964F; -fx-text-fill: white; -fx-font-weight: bold;" text="Subscribe" />
+                    </HBox>
+                </VBox>
+            <VBox.margin>
+               <Insets left="60.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="70.0" top="15.0" />
+            </padding>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            </HBox>
+
+            <!-- Bottom Text -->
+            <HBox alignment="CENTER" spacing="100">
+                <Label text="©2024 ARR, All right reserved" textFill="#cccccc" />
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="544.0" HBox.hgrow="ALWAYS" />
+                <HBox spacing="30">
+                    <Label text="Privacy Policy" textFill="#cccccc" />
+                    <Label text="Terms of Use" textFill="#cccccc" />
+                </HBox>
+            </HBox>
+        </VBox>
+
+
+    </VBox>
+</ScrollPane>

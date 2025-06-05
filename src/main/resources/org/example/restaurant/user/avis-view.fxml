@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="root" fitToWidth="true" hbarPolicy="NEVER" maxWidth="-Infinity" minHeight="-Infinity" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.user.AvisController">
+    <VBox maxWidth="Infinity" prefWidth="1440.0" spacing="0">
+
+        <!-- SECTION 1: NAVBAR -->
+        <HBox alignment="CENTER_LEFT" spacing="40" style="-fx-padding: 20; -fx-background-color: #133823;">
+            <Label fx:id="homeLabel" onMouseClicked="#goToHome" prefHeight="20.0" prefWidth="73.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" styleClass="nav-label" text="Home" textFill="white">
+                <HBox.margin>
+                    <Insets left="200.0" right="-200.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets right="-10.0" />
+                </padding></Label>
+            <Label fx:id="menuLabel" onMouseClicked="#goToMenu" prefHeight="20.0" prefWidth="65.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" styleClass="nav-label" text="Menu" textFill="white">
+                <HBox.margin>
+                    <Insets left="200.0" right="-200.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets right="-10.0" />
+                </padding></Label>
+            <Label fx:id="reviewLabel" onMouseClicked="#goToReview" prefHeight="20.0" prefWidth="86.0" style="-fx-font-size: 14px; -fx-font-weight: bold; " styleClass="nav-label" text="Review" textFill="white">
+                <HBox.margin>
+                    <Insets left="200.0" right="-230.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets right="-10.0" />
+                </padding></Label>
+            <Label fx:id="profileLabel" onMouseClicked="#goToProfile" prefHeight="20.0" prefWidth="86.0" style="-fx-font-size: 14px; -fx-font-weight: bold; " styleClass="nav-label" text="Profil" textFill="white">
+                <HBox.margin>
+                    <Insets left="200.0" right="-200.0" />
+                </HBox.margin></Label>
+            <ImageView fitHeight="201.0" fitWidth="224.0">
+                <image>
+                    <Image url="@images/logo_blanc.png" />
+                </image>
+                <HBox.margin>
+                    <Insets left="240.0" right="200.0" />
+                </HBox.margin>
+            </ImageView>
+            <Button fx:id="bookTableButton" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #B0964F; -fx-text-fill: white;" text="BOOK A TABLE">
+                <HBox.margin>
+                    <Insets left="-50.0" right="150.0" />
+                </HBox.margin></Button>
+        </HBox>
+
+
+        <!-- SECTION 3: REVIEW SUBMISSION -->
+        
+        <HBox alignment="CENTER" spacing="50" style="-fx-background-color: #133823; -fx-padding: 50;">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="370.0" prefWidth="1001.0" spacing="15.0" style="-fx-background-color: #E0E0E0; -fx-padding: 30; -fx-background-radius: 10;">
+                <Label prefHeight="98.0" prefWidth="637.0" style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #133823;" text="Write your review here">
+               <padding>
+                  <Insets bottom="40.0" left="120.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-90.0" top="-5.0" />
+               </VBox.margin>
+            </Label>
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #133823;" text="Comment:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-30.0" />
+               </VBox.margin></Label>
+                <TextField fx:id="commentField" prefHeight="54.0" prefWidth="547.0" promptText="Type your comment...">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></TextField>
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #133823;" text="Rating (1 to 5):">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+                <TextField fx:id="ratingField" prefHeight="51.0" prefWidth="547.0" promptText="e.g., 5">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></TextField>
+
+                <Button fx:id="submitReviewButton" onAction="#handleSubmitReview" prefHeight="43.0" prefWidth="89.0" style="-fx-background-color: #B0964F; -fx-text-fill: white; -fx-font-weight: bold;" text="Submit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin></Button>
+            <HBox.margin>
+               <Insets bottom="-10.0" left="50.0" top="-50.0" />
+            </HBox.margin>
+            <padding>
+               <Insets right="100.0" />
+            </padding>
+            </VBox>
+        </HBox>
+
+
+        <!-- SECTION 4 : Footer -->
+        <VBox spacing="30" style="-fx-background-color: #1e3c28;">
+            <padding>
+                <Insets bottom="30" left="80" right="80" top="50" />
+            </padding>
+            <HBox alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="1158.0" spacing="100" style="-fx-background-color: #214631;">
+                <!-- Logo + Social -->
+                <VBox spacing="20">
+                    <ImageView fitHeight="228.0" fitWidth="250.0">
+                        <image>
+                            <Image url="@images/logo_blanc.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets left="-40.0" />
+                        </VBox.margin>
+                    </ImageView>
+                    <HBox spacing="15" />
+                </VBox>
+
+                <!-- Opening times -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Opening Restaurent" textFill="white" />
+                    <Label prefHeight="17.0" prefWidth="180.0" text="Sa - We: 09 :00am - 10:00pm" textFill="#cccccc" />
+                    <Label text="Thu - We: 09 :00am - 10:00pm" textFill="#cccccc" />
+                    <Label text="Friday Closed" textFill="#cccccc" />
+                </VBox>
+
+                <!-- Links -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="User Link" textFill="white" />
+                    <Label text="About Us" textFill="#cccccc" />
+                    <Label text="Contact Us" textFill="#cccccc" />
+                    <Label text="Order Delivery" textFill="#cccccc" />
+                    <Label text="Payment et Tax" textFill="#cccccc" />
+                    <Label text="Terms of Services" textFill="#cccccc" />
+                </VBox>
+
+                <!-- Contact + Email -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Contact Us" textFill="white" />
+                    <Label text="543 Country Club Ave," textFill="#cccccc" />
+                    <Label text="NC 27587, London, UK" textFill="#cccccc" />
+                    <Label text="+1257 6541120" textFill="#cccccc" />
+                    <HBox spacing="0">
+                        <TextField promptText="Email" />
+                        <Button style="-fx-background-color: #B0964F; -fx-text-fill: white; -fx-font-weight: bold;" text="Subscribe" />
+                    </HBox>
+                </VBox>
+                <VBox.margin>
+                    <Insets left="60.0" />
+                </VBox.margin>
+                <padding>
+                    <Insets left="70.0" top="15.0" />
+                </padding>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+            </HBox>
+
+            <!-- Bottom Text -->
+            <HBox alignment="CENTER" spacing="100">
+                <Label text="©2024 ARR, All right reserved" textFill="#cccccc" />
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="544.0" HBox.hgrow="ALWAYS" />
+                <HBox spacing="30">
+                    <Label text="Privacy Policy" textFill="#cccccc" />
+                    <Label text="Terms of Use" textFill="#cccccc" />
+                </HBox>
+            </HBox>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

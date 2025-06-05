@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane stylesheets="@styles.css"  xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.restaurant.staff.controller.OrderDialogController"
+            styleClass="dialog-pane"
+            prefWidth="800" prefHeight="600">
+
+    <header>
+        <VBox spacing="10">
+            <Label fx:id="dialogTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <HBox spacing="20">
+                <Label fx:id="clientLabel" styleClass="label"/>
+                <Label fx:id="timeLabel" styleClass="label"/>
+            </HBox>
+        </VBox>
+    </header>
+
+    <content>
+        <VBox spacing="10">
+            <!-- Sélection des plats -->
+            <HBox spacing="10">
+                <ComboBox fx:id="categoryComboBox" promptText="Catégorie" prefWidth="200"/>
+                <Button text="Ajouter" onAction="#handleAddItem"/>
+            </HBox>
+
+            <!-- Table des plats disponibles -->
+            <TableView fx:id="menuItemsTable" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="Nom" prefWidth="200"/>
+                    <TableColumn fx:id="priceColumn" text="Prix" prefWidth="100"/>
+                    <TableColumn fx:id="categoryColumn" text="Catégorie" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <!-- Table des articles commandés -->
+            <TableView fx:id="orderItemsTable" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="orderItemNameColumn" text="Article" prefWidth="200"/>
+                    <TableColumn fx:id="orderItemQuantityColumn" text="Quantité" prefWidth="100"/>
+                    <TableColumn fx:id="orderItemPriceColumn" text="Prix unitaire" prefWidth="100"/>
+                    <TableColumn fx:id="orderItemTotalColumn" text="Total" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <!-- Bouton de suppression -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button text="Supprimer l'élément sélectionné" onAction="#handleRemoveItem"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+            </HBox>
+
+            <!-- Total -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Label text="Total:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="totalLabel" style="-fx-font-weight: bold;"/>
+            </HBox>
+
+            <!-- Boutons -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button text="Annuler" onAction="#handleCancel"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+                <Button fx:id="saveButton" text="Enregistrer" onAction="#handleSave"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </content>
+</DialogPane>

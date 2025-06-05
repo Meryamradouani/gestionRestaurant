@@ -1,0 +1,13 @@
+.nav-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.nav-label:hover {
+    -fx-text-fill: #B0964F;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

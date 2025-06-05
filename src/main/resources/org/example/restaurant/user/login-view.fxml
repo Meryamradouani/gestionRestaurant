@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.user.LoginController">
+    <!-- Arrière-plan image -->
+    <ImageView fitHeight="805" fitWidth="1440" preserveRatio="false">
+        <image>
+            <Image url="@images/backgroud_login.jpg" />
+        </image>
+        <opacity>0.7</opacity>
+    </ImageView>
+
+    <!-- Carte centrale -->
+    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="543.0" spacing="15.0" style="-fx-background-color: #F4F0F0; -fx-background-radius: 15;">
+        <padding>
+            <Insets bottom="30.0" left="25.0" right="25.0" />
+        </padding>
+
+        <ImageView fitHeight="204.0" fitWidth="215.0" preserveRatio="true">
+            <image>
+                <Image url="@images/logo_vert.png" />
+            </image>
+         <VBox.margin>
+            <Insets bottom="10.0" top="-125.0" />
+         </VBox.margin>
+        </ImageView>
+
+        <!-- Email -->
+        <Label style="-fx-font-size: 11px;" text="EMAIL ADDRESS" textFill="#29531f">
+         <VBox.margin>
+            <Insets left="-280.0" top="-15.0" />
+         </VBox.margin>
+         <padding>
+            <Insets top="-50.0" />
+         </padding></Label>
+        <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="47.0" prefWidth="374.0" promptText="johndoe@example.com">
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin></TextField>
+
+        <!-- Password -->
+        <Label style="-fx-font-size: 11px;" text="PASSWORD" textFill="#1b531c">
+         <VBox.margin>
+            <Insets left="-300.0" top="-7.0" />
+         </VBox.margin></Label>
+        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="374.0" promptText="***********">
+         <VBox.margin>
+            <Insets top="-15.0" />
+         </VBox.margin></PasswordField>
+      <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="138.0" text="Remember Me ?" textFill="#143f1c">
+         <padding>
+            <Insets left="-115.0" />
+         </padding>
+      </CheckBox>
+
+        <!-- Login Button -->
+        <Button fx:id="loginButton" onAction="#loginUser" prefHeight="47.0" prefWidth="373.0" style="-fx-background-color: #1B4E31; -fx-text-fill: white; -fx-font-weight: bold;" text="LOG IN">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></Button>
+        <Label fx:id="errorLabel" text="" textFill="red" layoutX="100" layoutY="200"/>
+
+        <!-- Lien vers register -->
+        <Label style="-fx-font-size: 11px;" text="IF NOT REGISTERED YET " textFill="#235526">
+            <graphic>
+                <Hyperlink onAction="#handleRegisterRedirect" text="CREATE ACCOUNT" textFill="#a89543">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            </graphic>
+         <VBox.margin>
+            <Insets bottom="-100.0" />
+         </VBox.margin>
+        </Label>
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
+    </VBox>
+</StackPane>

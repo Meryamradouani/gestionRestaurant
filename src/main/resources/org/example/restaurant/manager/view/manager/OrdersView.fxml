@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.restaurant.manager.controllers.manager.OrdersController">
+    <children>
+        <TableView fx:id="orderTable" layoutX="10.0" layoutY="10.0" prefWidth="580.0" prefHeight="380.0">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="100.0"/>
+                <TableColumn fx:id="customerNameColumn" text="Customer" prefWidth="240.0"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="240.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane stylesheets="@../../styles/menu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.restaurant.manager.controllers.manager.MenuController">
+    <children>
+        <ToolBar layoutY="14.0" prefHeight="67.0" prefWidth="801.0">
+            <items>
+                <Button onAction="#handleAddMenuItem" style="-fx-background-color: #133823;" styleClass="button add-btn" text="Ajouter">
+               <padding>
+                  <Insets bottom="-13.0" />
+               </padding></Button>
+                <Button layoutX="664.0" onAction="#refreshMenuTable" style="-fx-background-color: #133823;" styleClass="button refresh-btn" text="refresh">
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding></Button>
+            </items>
+        </ToolBar>
+
+        <TableView fx:id="menuTable" layoutY="86.0" prefHeight="400.0" prefWidth="800.0" styleClass="menu-table">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Nom" />
+                <TableColumn fx:id="priceColumn" prefWidth="80.0" text="Prix (€)" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="300.0" text="Description" />
+                <TableColumn fx:id="actionColumn" prefWidth="220.0" text="Actions" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>
