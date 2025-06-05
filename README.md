@@ -34,17 +34,17 @@ Modélisation UML : Diagrammes de cas d’utilisation, séquences, classes
 
 Conception UI/UX : Organisation optimisée, menus contextuels, animations simples, accessibilité
 
-<h1>🗂️ Structure du projet</h1>
-css
-Copy code
-📁 src/
-  ├── models/
-  ├── controllers/
-  ├── views/
-  └── utils/
-📁 resources/
-📁 database/
-📄 README.md
+<h1>🗂️ Structure du projet</h1><br>
+css<br>
+Copy code<br>
+📁 src/<br>
+  ├── models/<br>
+  ├── controllers/<br>
+  ├── views/<br>
+  └── utils/<br>
+📁 resources/<br>
+📁 database/<br>
+📄 README.md<br>
 <h1>🧩 Fonctionnalités principales</h1>
 Réserver et gérer les tables
 
