@@ -59,7 +59,6 @@ Générer les factures et reçus
 Consulter les rapports quotidiens/hebdomadaires
 
 <h1>📷 Aperçus</h1>
-![image](https://github.com/user-attachments/assets/6aff35ff-2417-4d8f-85e1-add436f791a6)
 
 ![image](https://github.com/user-attachments/assets/f2ddd13e-e49f-4cbf-bdaa-8bbe6492a6c5)
 ![image](https://github.com/user-attachments/assets/1888a59b-f45e-4617-93c1-7064743d6c0c)
